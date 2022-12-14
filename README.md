@@ -1,4 +1,5 @@
 STM32 Demos from Eugene Kalosha.
+
 Simple printf/scanf functions implementation for the Nucleo-G491RE evaluation board.
 
 STM32CubeIDE ver. 1.11.0 used to build the Demo. 
