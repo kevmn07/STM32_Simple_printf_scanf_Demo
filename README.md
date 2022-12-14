@@ -22,4 +22,3 @@ References:
 
 You are welcome to email <kevmn07@gmail.com> to report a bug, suggest improvements to the current Demo, or request a more reliable and fully documented version.
 However, no obligation to respond.
-
