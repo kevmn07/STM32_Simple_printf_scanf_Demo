@@ -19,7 +19,7 @@ You are welcome to email kevmn07@gmail.com to report a bug, suggest improvements
 However, no obligation to respond.
 
 ## References:
-1. [Goal board](https://www.st.com/resource/en/user_manual/dm00556337-stm32g4-nucleo64-boards-mb1367-stmicroelectronics.pdf)
+1. [STM32G4 Nucleo-64 boards User Manual](https://www.st.com/resource/en/user_manual/dm00556337-stm32g4-nucleo64-boards-mb1367-stmicroelectronics.pdf)
 2. [How to redirect the printf function to a UART for Debug messages](https://community.st.com/s/article/how-to-redirect-the-printf-function-to-a-uart-for-debug-messages)
 3. [Easily use printf on STM32](https://forum.digikey.com/t/easily-use-printf-on-stm32/20157)
 4. [Easily use scanf on STM32](https://forum.digikey.com/t/easily-use-scanf-on-stm32/21103)
