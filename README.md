@@ -21,5 +21,5 @@ Use this software at your own risk, no support, help, or comments are provided n
 3. [Easily use printf on STM32](https://forum.digikey.com/t/easily-use-printf-on-stm32/20157)
 4. [Easily use scanf on STM32](https://forum.digikey.com/t/easily-use-scanf-on-stm32/21103)
 
-You are welcome to [email](kevmn07@gmail.com) to report a bug, suggest improvements to the current Demo, or request a more reliable and fully documented version.
+You are welcome to email (kevmn07@gmail.com) to report a bug, suggest improvements to the current Demo, or request a more reliable and fully documented version.
 However, no obligation to respond.
