@@ -1,4 +1,4 @@
-# STM32 Demos from Eugene Kalosha.
+# STM32 Demos from EK.
 
 ## Simple printf/scanf functions implementation for the Nucleo-G491RE evaluation board.
 
