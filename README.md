@@ -1,4 +1,5 @@
 #STM32 Demos by EK
+
 ##Simple printf/scanf functions implementation for the Nucleo-G491RE evaluation board.
 
 STM32CubeIDE ver. 1.11.0 used to build the Demo. 
@@ -15,6 +16,7 @@ This is the simplest and most portable implementation, but it has major drawback
 __Use this software at your own risk, no support, help, or comments are provided now or in the future.__
 
 ##References:
+
 https://www.st.com/resource/en/user_manual/dm00556337-stm32g4-nucleo64-boards-mb1367-stmicroelectronics.pdf
 https://community.st.com/s/article/how-to-redirect-the-printf-function-to-a-uart-for-debug-messages
 https://forum.digikey.com/t/easily-use-printf-on-stm32/20157
