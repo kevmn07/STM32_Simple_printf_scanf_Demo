@@ -48,6 +48,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <string.h>
 
 /* USER CODE END Includes */
 
@@ -101,10 +102,10 @@ GETCHAR_PROTOTYPE
   /* Clear the Overrun flag just before receiving the first character */
   __HAL_UART_CLEAR_OREFLAG(&hlpuart1);
 
-  /* Wait for reception of a character on the USART RX line and echo this
-   * character on console */
+  /* Wait for reception of a character on the USART RX line */
   HAL_UART_Receive(&hlpuart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
-  HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+  /* Note, no echo because of polling */
+  /* HAL_UART_Transmit(&hlpuart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY); */
   return ch;
 }
 
@@ -122,7 +123,10 @@ GETCHAR_PROTOTYPE
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint8_t data[64];
+	uint8_t t_str[64] = {1};
+	char t_char;
+	int t_int;
+	float t_float;
 
   /* USER CODE END 1 */
 
@@ -152,36 +156,43 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  printf("NUCLEO-G491RE board is ready to transfer data through LPUART1 interface\r\n");
   while (1)
   {
-	  printf("Hello World!\r\n");
-	  printf("STM32 board s ready to transfer data through LPUART1 interface\r\n");
 
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  memset (t_str, 0x00, sizeof(t_str));
+
 	  /* delimiter */
 	  printf("\r\n*\t*\t*\r\n");
 
 	  /* string */
-	  printf("Insert string, no more than %d chars:\r\n", 63);
-	  scanf("%63s", (char*)data);
-	  printf("Received string:\t %s\r\n", data);
+	  printf("Insert a string, maximum %d characters:\r\n", 63);
+	  scanf("%63s", t_str);
+	  printf("\r\nReceived string:\r\n%s\r\n", t_str);
 
 	  /* char */
 	  printf("Insert char:\r\n");
-	  scanf("%c", (char*)data);
-	  printf("Received char:\t %s\r\n", data);
+	  scanf("%c", &t_char);
+	  printf("\r\nNote that scanf can be tricky!\r\n");
+	  printf("Received char:\r\n%c, hex: %#x\r\n", t_char, (uint8_t)t_char);
+
+	  printf("Let's try again.\r\n");
+	  printf("Insert char:\r\n");
+	  scanf("%c", &t_char);
+	  printf("\r\nReceived char:\r\n%c, hex: %#x\r\n", t_char, (uint8_t)t_char);
 
 	  /* integer */
 	  printf("Insert integer:\r\n");
-	  scanf("%d", (int*)data);
-	  printf("Received integer:\t %d\r\n", *(int*)data);
+	  scanf("%d", &t_int);
+ 	  printf("\r\nReceived integer:\r\n%d\r\n", t_int);
 
 	  /* float */
 	  printf("Insert float:\r\n");
-	  scanf("%f", (float*)data);
-	  printf("Received float:\t %f\r\n", *(float*)data);
+	  scanf("%f", &t_float);
+	  printf("\r\nReceived float:\r\n%f\r\n", t_float);
 
   }
   /* USER CODE END 3 */
